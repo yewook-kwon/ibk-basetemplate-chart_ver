@@ -142,9 +142,8 @@ h1.logo img {
 .cont {
   background: #fff;
   border-radius: 4px;
-  width: 100%;
+  width: calc(100% - 28px);
   height: calc(100vh - 190px);
-  box-sizing: border-box;
   padding: 50px;
   box-sizing: border-box;
   margin: 0 14px;
