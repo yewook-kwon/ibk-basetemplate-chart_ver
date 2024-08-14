@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기업은행환율게시판</title>
+    <!-- <link rel="stylesheet" href="../dist/output.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="fonts" href="./css/pretendard.css">
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script type="text/javascript" src="js/odometer.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/odometer-theme-default.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="wrap_bg">
+            <div class="flex_wrap">
+                <header class="header">
+                    <div class="header_left">
+                        <h1 class="logo">
+                            <img src="./img/logo.png" alt="로고">
+                        </h1>
+                        <h3 class="h_tit">환율게시판</h3>
+                    </div>
+
+                    <div class="header_right">
+                        <div class="time_wrap">
+                            <div class="time_box">
+                                <div class="clock">
+                                    <span class="date"></span>
+                                    <span class="time"></span>
+                                    <span class="ampm">AM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="cont flex">
+                    <div class="box_left box">
+                        <div class="table_wrap">
+                            <div class="table_tr">
+                                <div class="table_th h3_tit">
+                                    <p class="th_tit">오늘의 환율</p>
+                                    <p class="th_sub">CURRENCY</p>
+                                </div>
+                                <div class="table_th">
+                                    <div class="ani_box">
+                                        <div class="ani flex gap-18 ">
+                                            <img src="./img/lang_img01.png" alt="미국" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">미국</p>
+                                                <p class="th_cu">1 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table_th">
+                                    <div class="ani_box">
+                                        <div class="ani2 flex gap-18">
+                                            <img src="./img/lang_img02.png" alt="일본" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">일본</p>
+                                                <p class="th_cu">100 JPY</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_tr">
+                                <div class="flex grid_wrap">
+                                    <div class="lth_th">
+                                        <p class="lth_name">현찰</p>
+                                        <p class="lth_sub">CASH</p>
+                                    </div>
+                                    <div class="flex flex-col lth_th_wrap">
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">사실 때</p>
+                                            <p class="lth_sub">YOUR BUYING</p>
+                                        </div>
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">파실 때</p>
+                                            <p class="lth_sub">YOUR SELLING</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number ani sell">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani2">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">7</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">8</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number sell ani2">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">6</span>
+                                                <span class="number-list">6</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_tr">
+                                <div class="flex grid_wrap">
+                                    <div class="lth_th">
+                                        <p class="lth_name">송금</p>
+                                        <p class="lth_sub">T/T</p>
+                                    </div>
+                                    <div class="flex flex-col lth_th_wrap">
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">사실 때</p>
+                                            <p class="lth_sub">YOUR BUYING</p>
+                                        </div>
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">파실 때</p>
+                                            <p class="lth_sub">YOUR SELLING</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number ani sell">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani2">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">7</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">8</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number sell ani2">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">6</span>
+                                                <span class="number-list">6</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table_wrap">
+                            <div class="table_tr">
+                                <div class="table_th h3_tit">
+                                    <p class="th_tit">오늘의 환율</p>
+                                    <p class="th_sub">CURRENCY</p>
+                                </div>
+                                <div class="table_th">
+                                    <div class="ani_box">
+                                        <div class="ani3 flex gap-18 ">
+                                            <img src="./img/lang_img03.png" alt="유럽" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">유럽</p>
+                                                <p class="th_cu">1 EUR</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table_th">
+                                    <div class="ani_box">
+                                        <div class="ani4 flex gap-18">
+                                            <img src="./img/lang_img04.png" alt="중국" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">중국</p>
+                                                <p class="th_cu">1 CNY</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_tr">
+                                <div class="flex grid_wrap">
+                                    <div class="lth_th">
+                                        <p class="lth_name">현찰</p>
+                                        <p class="lth_sub">CASH</p>
+                                    </div>
+                                    <div class="flex flex-col lth_th_wrap">
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">사실 때</p>
+                                            <p class="lth_sub">YOUR BUYING</p>
+                                        </div>
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">파실 때</p>
+                                            <p class="lth_sub">YOUR SELLING</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number ani3">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number ani3 sell">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani4">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">7</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">8</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number sell ani4">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">6</span>
+                                                <span class="number-list">6</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="table_tr">
+                                <div class="flex grid_wrap">
+                                    <div class="lth_th">
+                                        <p class="lth_name">송금</p>
+                                        <p class="lth_sub">T/T</p>
+                                    </div>
+                                    <div class="flex flex-col lth_th_wrap">
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">사실 때</p>
+                                            <p class="lth_sub">YOUR BUYING</p>
+                                        </div>
+                                        <div class="lth_th lth_th2">
+                                            <p class="lth_name">파실 때</p>
+                                            <p class="lth_sub">YOUR SELLING</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani3">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number ani3 sell">
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">1</span>
+                                                <span class="number-list">3</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">5</span>
+                                                <span class="number-list">1</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col lth_th_wrap">
+                                    <div class="td_box ">
+                                        <div class="ani_box">
+                                            <span class="number ani4">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">7</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">8</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="td_box">
+                                        <div class="ani_box">
+                                            <span class="number sell ani4">
+                                                <span class="number-list">8</span>
+                                                <span class="number-list">4</span>
+                                                <span class="number-list">8</span>
+                                                <span class="number-list point">.</span>
+                                                <span class="number-list">6</span>
+                                                <span class="number-list">6</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box_right box">
+                        <div class="chart_wrap">
+                            <div class="tit_wrap">
+                                <h3 class="chart_tit">
+                                    <div class="ani_box">
+                                        <div class="ani flex gap-18">
+                                            <img src="./img/lang_img01.png" alt="미국" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">미국</p>
+                                                <p class="th_cu">1 USD</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </h3>
+                                <span class="chart_txt">최근 3개월 환율 추이</span>
+                            </div>
+
+                            <canvas id="exchangeRateChart" class="chart chart_box"></canvas>
+                            <div class="tooltip" id="tooltip"></div>
+                        </div>
+                        <div class="chart_wrap">
+                            <div class="tit_wrap">
+                                <h3 class="chart_tit">
+                                    <div class="ani_box">
+                                        <div class="ani flex gap-18">
+                                            <img src="./img/lang_img02.png" alt="일본" class="national">
+                                            <div class="flex th_info">
+                                                <p class="th_name">일본</p>
+                                                <p class="th_cu">100 JPY</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </h3>
+                                <span class="chart_txt">최근 3개월 환율 추이</span>
+                            </div>
+                            <canvas id="exchangeRateChart2" class="chart2 chart_box"></canvas>
+                            <div class="tooltip2" id="tooltip2"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="f_wrap">
+                    <div class="txt_loop">
+                        <h2 class="flogo">
+                            <img src="img/footer_logo.png" />
+                        </h2>
+                        현재 고시된 환율은 일중 외환시장 상황 등에 따라서 변경될 수 있습니다.&nbsp;
+                        <span> (This Quotation is subject to change.) &nbsp;IBK 기업은행</span>
+                    </div>
+
+                </div>
+            </footer>
+        </div>
+
+
+
+
+
+        <script src="./js/core.js"></script>
+
+
+</body>
+
+</html>
