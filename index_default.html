@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>기업은행환율게시판</title>
     <!-- <link rel="stylesheet" href="../dist/output.css"> -->
-    <link rel="stylesheet" href="./css/style2.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="fonts" href="./css/pretendard.css">
     <script src="./js/jquery-3.7.1.js"></script>
     <script type="text/javascript" src="js/odometer.min.js"></script>
@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap_ver">
         <div class="wrap_bg">
             <div class="flex_wrap">
                 <header class="header">
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                 </header>
-                <div class="cont flex-col">
+                <div class="cont">
                     <div class="box_left box">
                         <div class="table_wrap">
                             <div class="table_tr">
@@ -389,89 +389,10 @@
                             </div>
                         </div>
                     </div>
-                    <div class="box_right box char_first">
-                        <div class="chart_wrap">
-                            <div class="tit_wrap">
-                                <h3 class="chart_tit">
-                                    <div class="ani_box">
-                                        <div class="ani flex chart_title">
-                                            <img src="./img/lang_img01.png" alt="미국" class="national">
-                                            <div class="flex th_info">
-                                                <p class="th_name">미국</p>
-                                                <p class="th_cu">1 USD</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="chart_txt">최근 3개월 환율 추이</span>
-                                </h3>
-                                
-                            </div>
-
-                            <canvas id="exchangeRateChart" class="chart chart_box"></canvas>
-                            <div class="tooltip" id="tooltip"></div>
-                        </div>
-                        <div class="chart_wrap">
-                            <div class="tit_wrap">
-                                <h3 class="chart_tit">
-                                    <div class="ani_box">
-                                        <div class="ani flex chart_title">
-                                            <img src="./img/lang_img02.png" alt="일본" class="national">
-                                            <div class="flex th_info">
-                                                <p class="th_name">일본</p>
-                                                <p class="th_cu">100JPY</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="chart_txt">최근 3개월 환율 추이</span>
-                                </h3>
-                                
-                            </div>
-                            <canvas id="exchangeRateChart2" class="chart2 chart_box"></canvas>
-                            <div class="tooltip2" id="tooltip2"></div>
-                        </div>                        
-                    </div>
-
-                    <div class="box_right box">
-                        <div class="chart_wrap">
-                            <div class="tit_wrap">
-                                <h3 class="chart_tit">
-                                    <div class="ani_box">
-                                        <div class="ani flex chart_title">
-                                            <img src="./img/lang_img03.png" alt="유럽" class="national">
-                                            <div class="flex th_info">
-                                                <p class="th_name">유럽</p>
-                                                <p class="th_cu">1 EUR</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="chart_txt">최근 3개월 환율 추이</span>
-                                </h3>                                
-                            </div>
-                            <canvas id="exchangeRateChart3" class="chart3 chart_box"></canvas>
-                            <div class="tooltip3" id="tooltip3"></div>
-                        </div>
-                        <div class="chart_wrap">
-                            <div class="tit_wrap">
-                                <h3 class="chart_tit">
-                                    <div class="ani_box">
-                                        <div class="ani flex chart_title">
-                                            <img src="./img/lang_img04.png" alt="중국" class="national">
-                                            <div class="flex th_info">
-                                                <p class="th_name">중국</p>
-                                                <p class="th_cu">1CNY</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <span class="chart_txt">최근 3개월 환율 추이</span>
-                                </h3>
-                                
-                            </div>
-                            <canvas id="exchangeRateChart4" class="chart chart_box"></canvas>
-                            <div class="tooltip4" id="tooltip4"></div>
-                        </div>                        
-                    </div>
-
+                    
+                    
                 </div>
+                
             </div>
             <footer id="footer">
                 <div class="f_wrap">
